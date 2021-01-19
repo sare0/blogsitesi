@@ -1,0 +1,33 @@
+<div class="sticky-top">
+  <div class="container ">
+    <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-light pl-0 pr-0">
+      <a href="/"><img class="resim" src="/resimler/elma2.png" alt=""></a>
+  <a class="navbar-brand font-weight-bold logo d-flex align-items-center justify-content-center" href="/"> <h3> ELMA KURT'U </h3></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Anasayfa<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin-paneli">Admin Paneli</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Kategoriler
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%     for (var i = 0; i < kategori.length; i++) {   %>
+          <a class="dropdown-item" href="/kategori/<%= kategori[i].link %>"><%= kategori[i].isim %></a>
+          <%        }   %>
+        </div>
+      </li>
+  
+    </ul>
+  </div>
+</nav>
+  </div>
+</div>
